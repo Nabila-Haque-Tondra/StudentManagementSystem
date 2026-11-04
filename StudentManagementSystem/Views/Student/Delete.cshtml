@@ -1,0 +1,28 @@
+﻿@model StudentManagementSystem.Models.Student
+<h2>Delete Student</h2>
+<p>Are you sure you want to delete the following student?</p>
+<div>
+    <label>Full Name:</label>
+    <p>@Model.FullName</p>
+</div>
+<div>
+    <label>Email:</label>
+    <p>@Model.Email</p>
+</div>
+<div>
+    <label>Date of Birth:</label>
+    <p>@Model.DateOfBirth.ToString("dd-MM-yyyy")</p>
+</div>
+<div>
+    <label>Class Name:</label>
+    <p>@Model.ClassName</p>
+</div>
+<div>
+    <label>Section:</label>
+    <p>@Model.Section</p>
+</div>
+<form method="post" asp-action="DeleteConfirm">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">DeleteConfirm</button>
+    <a href="/Student/Index" class="btn btn-secondary">Cancel</a>
+</form>

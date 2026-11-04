@@ -1,0 +1,27 @@
+﻿@model StudentManagementSystem.Models.Student;
+
+<form method="post">
+	<label>Full Name</label>
+	<input type="text" name="FullName" />
+	
+	<br>
+	<label>Email</label>
+	<input type="email" name="Email" />
+
+	<br>
+
+	<label>Date of Birth</label>
+	<input type="date" name="DateOfBirth" />
+
+	<br >    
+
+	<label>Class Name</label>
+	<input type="text" name="ClassName" />
+	<br>
+
+	<label>Section</label>
+	<input type="text" name="Section" />
+	<br>
+	<div asp-validation-summary="All" class="text-danger"></div>
+	<button type="submit">Save</button>
+</form>

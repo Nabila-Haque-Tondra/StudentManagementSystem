@@ -1,0 +1,24 @@
+﻿@model StudentManagementSystem.Models.Student
+<form method="post">
+	<label>Full Name:</label> 
+	<input type="text" name="FullName" value="@Model.FullName"/>
+	<span asp-validation-for="FullName" class="text-danger"></span>
+	<br>
+	<label>Email: </label>
+	<input type="email" name="Email" value="@Model.Email"/>
+	<span asp-validation-for="Email" class="text-danger"></span>
+	<br>
+	<label>Date of Birth: </label>
+	<input type="date" name="DateOfBirth" value="@Model.DateOfBirth.ToString("yyyy-MM-dd")"/>
+	<span asp-validation-for="DateOfBirth" class="text-danger"></span>
+	<br>
+	<label>Class Name: </label>
+	<input type="text" name="ClassName" value="@Model.ClassName"/>
+	<span asp-validation-for="ClassName" class="text-danger"></span>
+	<br>
+	<label>Section: </label>
+	<input type="text" name="Section" value="@Model.Section"/>
+	<span asp-validation-for="Section" class="text-danger"></span>
+	<br>
+	<button type="submit">Update Student</button>
+</form>
